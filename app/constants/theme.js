@@ -5,7 +5,8 @@ export const COLORS = {
     black: '#1E1F20',
     white: '#FFFFFF',
     gray: '#6A6A6A',
-    blue: "#0682FE"
+    blue: "#305F72",
+    salmon: '#F18C8E'
 }
 
 export const SIZES = {
@@ -29,6 +30,6 @@ export const SIZES = {
 };
 
 
-const appTheme = { COLORS, SIZES, FONTS };
+const appTheme = { COLORS, SIZES };
 
 export default appTheme;
