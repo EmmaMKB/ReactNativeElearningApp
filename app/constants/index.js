@@ -1,0 +1,1 @@
+import theme, { COLORS, SIZES, FONTS } from "./theme";
