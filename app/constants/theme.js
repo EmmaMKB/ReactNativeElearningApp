@@ -6,7 +6,8 @@ export const COLORS = {
     white: '#FFFFFF',
     gray: '#6A6A6A',
     blue: "#305F72",
-    salmon: '#F18C8E'
+    salmon: '#F18C8E',
+    salmon2: '#FAE4F4'  
 }
 
 export const SIZES = {
