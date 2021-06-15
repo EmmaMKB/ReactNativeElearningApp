@@ -1,3 +1,4 @@
 import theme from "./theme";
+import images from "./images";
 
-export { theme };
+export { images, theme };
