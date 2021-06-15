@@ -5,6 +5,7 @@ import {
     TextInput,
     View,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import { theme } from '../../constants';
 
@@ -16,7 +17,10 @@ const Home = () => {
     <View style={styles.container}>
         <View style={styles.header}>
             <Text style={styles.headerTitle}>Welcome back John Doe</Text>
-            <TextInput style={styles.input} placeholder="Search for new knowledge" />
+            <View style={styles.searchInput}>
+                <TextInput style={styles.input} placeholder="Search for new knowledge" />
+                <Icon style={styles.searchIcon} name="search" size={20} color={COLORS.gray} />
+            </View>
         </View>
         <View style={styles.content}>
             <Text style={styles.contentTitle}>Courses in progress</Text>
@@ -49,6 +53,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: 15,
         paddingTop: 15
     },
+    searchInput: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
     // Texts
     headerTitle: {
         fontSize: SIZES.h1,
@@ -68,7 +77,12 @@ const styles = StyleSheet.create({
         backgroundColor: COLORS.white,
         borderRadius: 15,
         paddingStart: 10,
-        paddingEnd: 10
+        paddingEnd: 40,
+        width: '100%'
+    },
+    searchIcon: {
+        position: 'absolute',
+        right: 10
     }
 })
 export default Home;
