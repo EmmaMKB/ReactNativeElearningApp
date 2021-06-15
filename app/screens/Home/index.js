@@ -41,14 +41,14 @@ const courses = [
         title: 'Graphic design with adobe photoshop',
         hours: 10,
         lessons: 19,
-        image: course3
+        image: course4
     },
     {
         key: '5',
         title: 'Figma prototyping',
         hours: 10,
         lessons: 19,
-        image: course4
+        image: course3
     }
 ]
 const Home = () => {

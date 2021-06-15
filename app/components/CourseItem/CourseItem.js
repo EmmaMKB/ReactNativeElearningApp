@@ -23,10 +23,10 @@ const CourseItem = ({item}) => {
             <Text style={{ color: COLORS.salmon}}>{item.hours} hours, {item.lessons} lessons</Text>
         </View>
         <View style={styles.extraInfoContainer}>
-            <Text>25%</Text>
+            <Text style={{color: COLORS.blue, fontWeight: '100'}}>25%</Text>
         </View>
         <View style={styles.iconContainer}>
-            <Icon style={styles.icon} name="play-outline" size={20} color={COLORS.salmon} />
+            <Icon style={styles.icon} name="play-outline" size={15} color={COLORS.salmon} />
         </View>
     </View>
   );
@@ -47,13 +47,19 @@ const styles = StyleSheet.create({
    courseContainer: {
         flex: 3,
         flexDirection: 'column',
-        marginStart: 10
    },
    extraInfoContainer: {
-        flex: 1
+        flex: 0.5,
    },
    iconContainer: {
-        flex: 1
+        flex: 0.5,
+        backgroundColor: COLORS.white,
+        height: 30,
+        maxWidth: 30,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 50,
+        padding: 5
    },
 })
 export default CourseItem;
