@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+    FlatList,
     StyleSheet,
     Text,
     TextInput,
@@ -7,10 +8,49 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import { theme } from '../../constants';
+import { CourseItem } from '../../components';
 
+import { theme, images } from '../../constants';
+const { course1, course2, course3, course4, course5 } = images;
 const { COLORS, SIZES } = theme;
 
+const courses = [
+    {
+        key: '1',
+        title: 'Adobe XD Prototyping',
+        hours: 10,
+        lessons: 19,
+        image: course1
+    },
+    {
+        key: '2',
+        title: 'Sketch shortcuts and tricks',
+        hours: 10,
+        lessons: 19,
+        image: course5
+    },
+    {
+        key: '3',
+        title: 'UI Motion design in After Effects 2021',
+        hours: 10,
+        lessons: 19,
+        image: course2
+    },
+    {
+        key: '4',
+        title: 'Graphic design with adobe photoshop',
+        hours: 10,
+        lessons: 19,
+        image: course3
+    },
+    {
+        key: '5',
+        title: 'Figma prototyping',
+        hours: 10,
+        lessons: 19,
+        image: course4
+    }
+]
 const Home = () => {
 
   return (
@@ -24,6 +64,14 @@ const Home = () => {
         </View>
         <View style={styles.content}>
             <Text style={styles.contentTitle}>Courses in progress</Text>
+            <FlatList 
+                data={courses}
+                style={styles.list}
+                showsHorizontalScrollIndicator={false}
+                renderItem={({ item }) => (
+                    <CourseItem item={item} />
+                )}
+            />
         </View>
     </View>
   );
@@ -57,6 +105,9 @@ const styles = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center'
+    },
+    list: {
+        marginTop: 15
     },
     // Texts
     headerTitle: {
